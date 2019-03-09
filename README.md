@@ -1,5 +1,5 @@
 # NOAA_AIS
-### Python 3 toolkit for working with NOAA AIS, ICOADS, OISST and NETCDF4 Data in general. Since we have entered an era where the federal budget means that this data may go offline for extended periods, bulk download scripts have been included. 
+##### Basic Python 3 toolkit for working with NOAA AIS, ICOADS, OISST and NETCDF4 Data in general. Since we have entered an era where the federal budget means that this data may go offline for extended periods, bulk download scripts have been included. 
 #### Download Scripts
 Since this is an I/O Bound activity, we can make use of  multi threading to speed up the process. Pool size is set at 4 but can be increased to whatever you like. 
 ais.py, icoads.py and oisst.py use HTML parsing to return a series of links. Adjust parameters in the files to choose what range of files you would like to download. 
