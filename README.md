@@ -9,4 +9,4 @@ Simple script to filter AIS Data. Adjust accordingly to filter by column name an
 #### NETCDF4 Translator
 Script to convert NETCDF4 to CSV which may be neccesary if want to utilize legacy database injection scripts.
 #### Visualization
-Uses Jupyter Notebooks and Plotly to visualize Some of the NOAA data. The example notebook visualizes sea surface temperatures (SST) 
+Uses Jupyter Notebooks and Plotly to visualize the NOAA data. The example notebook visualizes sea surface temperatures (SST) 
