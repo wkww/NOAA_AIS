@@ -6,9 +6,10 @@ import pandas as pd
 
 
 #navigating to folder location. You may have to change this.
-base_dir = os.path.abspath(os.path.dirname( '//your oisst ncdf file here//'))
+base_dir = os.path.abspath(os.path.dirname( '__file__'))
 
 for file in os.listdir(base_dir):
+    print(file)
     if file.endswith(".nc"):
         dataset = netCDF4.Dataset(base_dir+"/"+file)
         
@@ -59,8 +60,12 @@ for file in os.listdir(base_dir):
         df_err = pd.DataFrame(data=np.ndarray.flatten(raw_errdata), columns={'err'})
         df_err = pd.concat([base_df, df_err],axis=1)   
 
+        root, ext = os.path.splitext(file)
+        newfilename= root+'.csv.'
+        print(newfilename)
+        df_sst.to_csv(newfilename, line_terminator='\n', index=False, header=True)
 
-dataset.close()
+        dataset.close()
         
 
 df_ice.to_csv('ice_data.csv', line_terminator='\n', index=False, header=True)
